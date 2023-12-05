@@ -1,0 +1,20 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Name="Trinam'23" Manufacturer="Trinam Design" Version="0.0.2.0" UpgradeCode="db4bd8c4-7c09-46d7-8fb0-457d2ae2d0ca">
+
+        <!-- Using StandardDirectory to reference a standard directory -->
+        <StandardDirectory Id="ProgramFilesFolder">
+            <!-- Your custom directory inside Program Files -->
+            <Directory Id="TestingWIX" Name="TestingWIX4">
+                <!-- Define your components here -->
+                <Component Id="Component1" Guid="1e363c6d-95b0-434a-b9a6-a1be5a005479">
+                    <File Id="FileA1" Source="a.txt" />
+                    <File Id="FileA2" Source="b.txt" />
+                </Component>
+            </Directory>
+        </StandardDirectory>
+
+        <Feature Id="Main">
+            <ComponentRef Id="Component1" />
+        </Feature>
+    </Package>
+</Wix>
