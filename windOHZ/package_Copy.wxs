@@ -1,0 +1,21 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package 
+      Manufacturer="Deployment Dojo"
+      Name="~Ep2"
+      Version="0.9"
+      UpgradeCode="28a59869-cc55-47da-8a46-abbd556d3a1b">
+  
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Name="~Ep2">
+        <Component Id="c1">
+          <File Source="ep2.txt" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <Feature Id="Main">
+      <ComponentRef Id="c1" />
+    </Feature>
+    
+  </Package>
+</Wix>
